@@ -1,0 +1,135 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article>*+* {
+    margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+*{
+    font-family: sans-serif;
+}
+body{
+    display: grid;
+    grid-template-rows: auto 1fr;
+    /* background:url(img/space3.jpg);
+    background-size: 100%; */
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    background-color: blueviolet;
+}
+.points{
+    font-size: 24px;
+    font-weight: bold;
+}
+main{
+    display: grid;
+    grid-template-rows: 1fr auto;
+    min-height: 100%;
+    /* color: white; */
+}
+li{
+    list-style: none;
+}
+h2{
+    text-align: center;
+}
+.img{
+    width: 200px;
+    margin: 0 auto;
+}
+ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+#question{
+    display: flex;
+    flex-direction: column;
+}
+section{
+    text-align: center;
+    margin-bottom: 5px;
+}
+button{
+    width: 200px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 0px;
+    background-color: black;
+    color: white;
+}
